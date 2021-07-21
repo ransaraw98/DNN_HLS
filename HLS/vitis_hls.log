@@ -1,7 +1,7 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'menuw' on host 'ransara-laptop' (Windows NT_amd64 version 6.2) on Wed Jul 21 12:25:20 +0530 2021
+INFO: [HLS 200-10] For user 'menuw' on host 'ransara-laptop' (Windows NT_amd64 version 6.2) on Wed Jul 21 12:50:33 +0530 2021
 INFO: [HLS 200-10] In directory 'C:/Users/menuw/Documents/SiA/DNN/HLS'
-Sourcing Tcl script 'C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/solution3/csynth.tcl'
+Sourcing Tcl script 'C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/solution4/csynth.tcl'
 INFO: [HLS 200-1510] Running: open_project DNN 
 INFO: [HLS 200-10] Opening project 'C:/Users/menuw/Documents/SiA/DNN/HLS/DNN'.
 INFO: [HLS 200-1510] Running: set_top dnn 
@@ -9,8 +9,8 @@ INFO: [HLS 200-1510] Running: add_files DNN.cpp
 INFO: [HLS 200-10] Adding design file 'DNN.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb dnn_testbench.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'dnn_testbench.cpp' to the project
-INFO: [HLS 200-1510] Running: open_solution solution3 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/solution3'.
+INFO: [HLS 200-1510] Running: open_solution solution4 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/solution4'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
@@ -18,12 +18,10 @@ Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020
 INFO: [HLS 200-1510] Running: set_part xc7z010-clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: set_directive_top -name dnn dnn 
-INFO: [HLS 200-1510] Running: set_directive_unroll dnn/COMPUTE_y 
-INFO: [HLS 200-1510] Running: set_directive_unroll dnn/COMPUTE_P2_INNER 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.138 seconds; current allocated memory: 191.474 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 191.534 MB.
 INFO: [HLS 200-10] Analyzing design file 'DNN.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.486 seconds; current allocated memory: 191.766 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.768 seconds; current allocated memory: 191.783 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-131] Inlining function 'ap_fixed_base<121, 12, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(char const*)' into 'ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/include/header_files\ap_fixed.h:148:67)
 INFO: [HLS 214-131] Inlining function 'ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)' into '__cxx_global_var_init.17' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h:92:1)
@@ -2325,10 +2323,8 @@ INFO: [HLS 214-131] Inlining function 'bool operator==<52, false>(ap_range_ref<5
 INFO: [HLS 214-131] Inlining function 'ap_uint<11>::ap_uint(int)' into 'double pow_reduce::pow_generic<double>(double, double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:419:14)
 INFO: [HLS 214-131] Inlining function 'ap_uint<52>::ap_uint(int)' into 'double pow_reduce::pow_generic<double>(double, double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:418:14)
 INFO: [HLS 214-131] Inlining function 'ap_uint<11>::ap_uint(int)' into 'double pow_reduce::pow_generic<double>(double, double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:411:14)
-INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned short, 0>::read(unsigned short&)' into 'dnn(hls::stream<unsigned short, 0>&, hls::stream<double, 0>&)' (DNN.cpp:29:9)
-INFO: [HLS 214-131] Inlining function 'hls::stream<double, 0>::write(double const&)' into 'dnn(hls::stream<unsigned short, 0>&, hls::stream<double, 0>&)' (DNN.cpp:65:16)
-INFO: [HLS 214-186] Unrolling loop 'COMPUTE_P2_INNER' (DNN.cpp:53:26) in function 'dnn' completely with a factor of 200 (DNN.cpp:53:26)
-INFO: [HLS 214-186] Unrolling loop 'COMPUTE_y' (DNN.cpp:45:15) in function 'dnn' completely with a factor of 200 (DNN.cpp:45:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<unsigned short, 0>::read(unsigned short&)' into 'dnn(hls::stream<unsigned short, 0>&, hls::stream<float, 0>&)' (DNN.cpp:29:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<float, 0>::write(float const&)' into 'dnn(hls::stream<unsigned short, 0>&, hls::stream<float, 0>&)' (DNN.cpp:65:16)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isinf<double>(double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isnan<double>(double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.139.149.159.169.179.189.199.209.278.288)' into 'fp_struct<double>::to_double() const (.136.146.156.166.176.186.196.206.275.285)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:518:0)
@@ -2347,629 +2343,32 @@ INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into '
 INFO: [HLS 214-178] Inlining function 'ap_fixed_base<79, 0, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:321:0)
 INFO: [HLS 214-178] Inlining function 'ap_fixed_base<15, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:321:0)
 INFO: [HLS 214-178] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'double pow_reduce::pow_generic<double>(double, double)' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:321:0)
-INFO: [HLS 214-178] Inlining function 'pow' into 'sigmoid(double)' (DNN.cpp:20:0)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:38:37)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:26)
-WARNING: [HLS 214-167] The program may have out of bound array access (DNN.cpp:46:16)
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-WARNING: [HLS 214-167] The program may have out of bound array access
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 95 seconds. CPU system time: 7 seconds. Elapsed time: 126.592 seconds; current allocated memory: 235.169 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 235.170 MB.
+INFO: [HLS 214-178] Inlining function 'pow' into '__gnu_cxx::__promote_2<double, float, __gnu_cxx::__promote<double, std::__is_integer<double>::__value>::__type, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type>::__type std::pow<double, float>(double, float)' (C:/Xilinx/Vitis_HLS/2020.2/tps/mingw/6.2.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\6.2.0\include\c++\cmath:439:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<double, float, __gnu_cxx::__promote<double, std::__is_integer<double>::__value>::__type, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type>::__type std::pow<double, float>(double, float)' into 'sigmoid(float)' (DNN.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'sigmoid(float)' into 'dnn(hls::stream<unsigned short, 0>&, hls::stream<float, 0>&)' (DNN.cpp:25:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 62 seconds. CPU system time: 5 seconds. Elapsed time: 90.429 seconds; current allocated memory: 223.648 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 223.649 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.715 seconds; current allocated memory: 347.214 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.176 seconds; current allocated memory: 333.905 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:412) automatically.
 INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:548) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.004 seconds; current allocated memory: 473.949 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.638 seconds; current allocated memory: 459.271 MB.
 INFO: [XFORM 203-510] Pipelining loop 'LOAD_IMG' (DNN.cpp:27) in function 'dnn' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'COMPUTE_P1_INNER' (DNN.cpp:37) in function 'dnn' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'COMPUTE_P2' (DNN.cpp:52) in function 'dnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'COMPUTE_y' (DNN.cpp:45) in function 'dnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'COMPUTE_P2_INNER' (DNN.cpp:33) in function 'dnn' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'OUTPUT' (DNN.cpp:61) in function 'dnn' automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:412) automatically.
-WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'img' in function 'dnn' (DNN.cpp:38:37).
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_pow.h:690:3) in function 'pow_reduce::pow_generic<double>'... converting 13 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.455 seconds; current allocated memory: 615.660 MB.
-INFO: [XFORM 203-541] Flattening a loop nest 'COMPUTE_P1' (DNN.cpp:36:25) in function 'dnn'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.197 seconds; current allocated memory: 599.704 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'COMPUTE_P1' (DNN.cpp:36:40) in function 'dnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'COMPUTE_P2' (DNN.cpp:52:40) in function 'dnn'.
 INFO: [HLS 200-472] Inferring partial write operation for 'img' (C:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145:9)
 INFO: [HLS 200-472] Inferring partial write operation for 'P1' (DNN.cpp:40:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'y' (DNN.cpp:46:16)
 INFO: [HLS 200-472] Inferring partial write operation for 'P2' (DNN.cpp:56:23)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.229 seconds; current allocated memory: 706.839 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.306 seconds; current allocated memory: 673.686 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'dnn' ...
 WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
@@ -2981,25 +2380,13 @@ INFO: [HLS 200-486] Changing DSP48 latency (root=r_V_18) to 3 in order to utiliz
 INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 35, function 'pow_generic<double>'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.209 seconds; current allocated memory: 707.718 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.94 seconds; current allocated memory: 674.378 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.847 seconds; current allocated memory: 708.422 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'sigmoid' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.001 seconds; current allocated memory: 708.667 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.996 seconds; current allocated memory: 708.916 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.787 seconds; current allocated memory: 675.082 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3008,29 +2395,41 @@ INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln38) to 3 in order to util
 INFO: [SCHED 204-61] Pipelining loop 'LOAD_IMG'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_IMG'
 INFO: [SCHED 204-61] Pipelining loop 'COMPUTE_P1_COMPUTE_P1_INNER'.
-WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'dadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36_1', DNN.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36', DNN.cpp:36).
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'dadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36_1', DNN.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36', DNN.cpp:36).
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'dadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36_1', DNN.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36', DNN.cpp:36).
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'dadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36_1', DNN.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36', DNN.cpp:36).
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'dadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36_1', DNN.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P1_COMPUTE_P1_INNER'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:38) and 'select' operation ('select_ln36', DNN.cpp:36).
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 23, loop 'COMPUTE_P1_COMPUTE_P1_INNER'
-INFO: [SCHED 204-61] Pipelining loop 'COMPUTE_P2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1410, loop 'COMPUTE_P2'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 18, loop 'COMPUTE_P1_COMPUTE_P1_INNER'
+INFO: [SCHED 204-61] Pipelining loop 'COMPUTE_y'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 108, loop 'COMPUTE_y'
+INFO: [SCHED 204-61] Pipelining loop 'COMPUTE_P2_COMPUTE_P2_INNER'.
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P2_COMPUTE_P2_INNER'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:54) and 'select' operation ('select_ln52_1', DNN.cpp:52).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P2_COMPUTE_P2_INNER'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:54) and 'select' operation ('select_ln52_1', DNN.cpp:52).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P2_COMPUTE_P2_INNER'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:54) and 'select' operation ('select_ln52_1', DNN.cpp:52).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P2_COMPUTE_P2_INNER'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:54) and 'select' operation ('select_ln52_1', DNN.cpp:52).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dnn' (loop 'COMPUTE_P2_COMPUTE_P2_INNER'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'fadd' operation ('temp1', DNN.cpp:54) and 'select' operation ('select_ln52_1', DNN.cpp:52).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 13, loop 'COMPUTE_P2_COMPUTE_P2_INNER'
 INFO: [SCHED 204-61] Pipelining loop 'OUTPUT'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'OUTPUT'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 10 seconds. CPU system time: 0 seconds. Elapsed time: 10.767 seconds; current allocated memory: 717.221 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.037 seconds; current allocated memory: 675.736 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 30 seconds. CPU system time: 0 seconds. Elapsed time: 29.718 seconds; current allocated memory: 744.243 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.168 seconds; current allocated memory: 676.578 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3045,27 +2444,24 @@ INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44ns_93_5_1': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'mul_50ns_50ns_100_5_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_54s_67ns_120_5_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 55 seconds. CPU system time: 0 seconds. Elapsed time: 55.189 seconds; current allocated memory: 746.227 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.502 seconds; current allocated memory: 749.602 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.559 seconds; current allocated memory: 678.563 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-500] Setting interface mode on port 'dnn/image_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'dnn/scores_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'dnn' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-104] Estimated max fanout for 'dnn' is 155614 from HDL expression: (1'b0 == ap_block_pp2_stage0_11001)
-INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 200 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 200 instance(s).
+INFO: [RTGEN 206-104] Estimated max fanout for 'dnn' is 6825 from HDL expression: (1'b0 == ap_block_pp2_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mac_muladd_10ns_9ns_8ns_18_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_6_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dnn'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 34 seconds. CPU system time: 0 seconds. Elapsed time: 33.123 seconds; current allocated memory: 850.306 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.15 seconds; current allocated memory: 683.594 MB.
 INFO: [RTMG 210-282] Generating pipelined core: 'dnn_mul_54s_67ns_120_5_1_Multiplier_0'
 INFO: [RTMG 210-282] Generating pipelined core: 'dnn_mul_13s_71s_71_5_1_Multiplier_1'
 INFO: [RTMG 210-282] Generating pipelined core: 'dnn_mul_43ns_36ns_79_3_1_Multiplier_2'
@@ -3077,12 +2473,12 @@ INFO: [RTMG 210-279] Implementing memory 'dnn_pow_generic_double_s_pow_reduce_an
 INFO: [RTMG 210-278] Implementing memory 'dnn_img_ram (RAM)' using auto RAMs with power-on initialization.
 INFO: [RTMG 210-278] Implementing memory 'dnn_P1_ram (RAM)' using auto RAMs with power-on initialization.
 INFO: [RTMG 210-279] Implementing memory 'dnn_W1_rom' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'dnn_W2_rom' using auto ROMs.
 INFO: [RTMG 210-278] Implementing memory 'dnn_P2_ram (RAM)' using auto RAMs with power-on initialization.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 99 seconds. CPU system time: 5 seconds. Elapsed time: 104.342 seconds; current allocated memory: 914.161 MB.
+INFO: [RTMG 210-279] Implementing memory 'dnn_W2_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 17 seconds. CPU system time: 1 seconds. Elapsed time: 18.472 seconds; current allocated memory: 707.591 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for dnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for dnn.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 341 seconds. CPU system time: 13 seconds. Elapsed time: 385.223 seconds; current allocated memory: 915.543 MB.
-INFO: [HLS 200-112] Total CPU user time: 346 seconds. Total CPU system time: 14 seconds. Total elapsed time: 388.741 seconds; peak allocated memory: 914.161 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.04 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 95 seconds. CPU system time: 7 seconds. Elapsed time: 134.932 seconds; current allocated memory: 707.701 MB.
+INFO: [HLS 200-112] Total CPU user time: 99 seconds. Total CPU system time: 8 seconds. Total elapsed time: 138.522 seconds; peak allocated memory: 707.591 MB.

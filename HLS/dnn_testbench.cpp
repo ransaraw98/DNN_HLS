@@ -13,7 +13,7 @@ int main(){
 
 
 	hls::stream<unsigned short int> image;
-	hls::stream<double> scores;
+	hls::stream<float> scores;
 
 	for (int i=0;i<785;i++){
 
