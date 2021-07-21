@@ -1,9 +1,8 @@
 // DNN.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#define H 200
+#define H 100
 #define DIN 785
 #define K 10
-
 
 #include <iostream>
 #include <stdio.h>
@@ -11,7 +10,7 @@
 #include <ctgmath>
 #include "weights.h"
 #include <hls_stream.h>
-          
+
 float P1[H];
 float y[H];
 float P2[K];
@@ -19,6 +18,16 @@ unsigned short img[785];
 
 double sigmoid(float alpha) {
     return 1 / (1 + pow(2.71828, -alpha));
+}
+
+float reLU(float alpha){
+	if (alpha >0){
+		return alpha;
+	}
+	else{
+		return 0;
+	}
+
 }
 
 void dnn(hls::stream<unsigned short int> &image,hls::stream<float> &scores)

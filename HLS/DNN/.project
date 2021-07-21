@@ -37,6 +37,21 @@
 			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/functions.h</name>
+			<type>1</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/functions.h</location>
+		</link>
+		<link>
+			<name>ReLU1/constraints</name>
+			<type>2</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/ReLU1/.tcls</location>
+		</link>
+		<link>
+			<name>sigmoidH100/constraints</name>
+			<type>2</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/.tcls</location>
+		</link>
+		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/solution1/.tcls</location>
@@ -65,6 +80,36 @@
 			<name>testbench/dnn_testbench.cpp</name>
 			<type>1</type>
 			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/dnn_testbench.cpp</location>
+		</link>
+		<link>
+			<name>ReLU1/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/ReLU1/ReLU1.directive</location>
+		</link>
+		<link>
+			<name>ReLU1/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/ReLU1/directives.tcl</location>
+		</link>
+		<link>
+			<name>ReLU1/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/ReLU1/script.tcl</location>
+		</link>
+		<link>
+			<name>sigmoidH100/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/sigmoidH100.directive</location>
+		</link>
+		<link>
+			<name>sigmoidH100/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/directives.tcl</location>
+		</link>
+		<link>
+			<name>sigmoidH100/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/script.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

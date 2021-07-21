@@ -1,0 +1,211 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 22 01:00:45 2021
+# Process ID: 11052
+# Current directory: C:/Users/menuw/Documents/SiA/DNN/RTL/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log dnn.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dnn.tcl
+# Log file: C:/Users/menuw/Documents/SiA/DNN/RTL/project_1/project_1.runs/synth_1/dnn.vds
+# Journal file: C:/Users/menuw/Documents/SiA/DNN/RTL/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source dnn.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/menuw/Documents/SiA/DNN/HLS/RTL/dnn'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top dnn -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16544
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1123.176 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dnn' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 21'b000000000000000000001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 21'b000000000000000000010 
+	Parameter ap_ST_fsm_state4 bound to: 21'b000000000000000000100 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 21'b000000000000000001000 
+	Parameter ap_ST_fsm_pp1_stage1 bound to: 21'b000000000000000010000 
+	Parameter ap_ST_fsm_pp1_stage2 bound to: 21'b000000000000000100000 
+	Parameter ap_ST_fsm_pp1_stage3 bound to: 21'b000000000000001000000 
+	Parameter ap_ST_fsm_pp1_stage4 bound to: 21'b000000000000010000000 
+	Parameter ap_ST_fsm_pp1_stage5 bound to: 21'b000000000000100000000 
+	Parameter ap_ST_fsm_state23 bound to: 21'b000000000001000000000 
+	Parameter ap_ST_fsm_pp2_stage0 bound to: 21'b000000000010000000000 
+	Parameter ap_ST_fsm_state132 bound to: 21'b000000000100000000000 
+	Parameter ap_ST_fsm_pp3_stage0 bound to: 21'b000000001000000000000 
+	Parameter ap_ST_fsm_pp3_stage1 bound to: 21'b000000010000000000000 
+	Parameter ap_ST_fsm_pp3_stage2 bound to: 21'b000000100000000000000 
+	Parameter ap_ST_fsm_pp3_stage3 bound to: 21'b000001000000000000000 
+	Parameter ap_ST_fsm_pp3_stage4 bound to: 21'b000010000000000000000 
+	Parameter ap_ST_fsm_pp3_stage5 bound to: 21'b000100000000000000000 
+	Parameter ap_ST_fsm_state146 bound to: 21'b001000000000000000000 
+	Parameter ap_ST_fsm_pp4_stage0 bound to: 21'b010000000000000000000 
+	Parameter ap_ST_fsm_state149 bound to: 21'b100000000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'dnn_img' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_img.v:40]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 785 - type: integer 
+	Parameter AddressWidth bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_img_ram' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_img.v:6]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 10 - type: integer 
+	Parameter MEM_SIZE bound to: 785 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_img_ram.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_img.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_img_ram' (1#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_img.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_img' (2#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_img.v:40]
+INFO: [Synth 8-6157] synthesizing module 'dnn_P1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P1.v:40]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 100 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_P1_ram' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 100 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_P1_ram.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P1.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_P1_ram' (3#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_P1' (4#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P1.v:40]
+INFO: [Synth 8-6157] synthesizing module 'dnn_W1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W1.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 78600 - type: integer 
+	Parameter AddressWidth bound to: 17 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_W1_rom' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W1.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 17 - type: integer 
+	Parameter MEM_SIZE bound to: 78600 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_W1_rom.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W1.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_W1_rom' (5#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_W1' (6#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'dnn_P2' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P2.v:40]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 10 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_P2_ram' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 4 - type: integer 
+	Parameter MEM_SIZE bound to: 10 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_P2_ram.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P2.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_P2_ram' (7#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_P2' (8#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_P2.v:40]
+INFO: [Synth 8-6157] synthesizing module 'dnn_W2' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W2.v:39]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 1000 - type: integer 
+	Parameter AddressWidth bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_W2_rom' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W2.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 10 - type: integer 
+	Parameter MEM_SIZE bound to: 1000 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_W2_rom.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W2.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_W2_rom' (9#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W2.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_W2' (10#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_W2.v:39]
+INFO: [Synth 8-6157] synthesizing module 'dnn_pow_generic_double_s' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s.v:10]
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb.v:39]
+	Parameter DataWidth bound to: 58 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb_rom' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb.v:6]
+	Parameter DWIDTH bound to: 58 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb_rom.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb_rom' (11#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb' (12#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58bkb.v:39]
+INFO: [Synth 8-6157] synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud.v:52]
+	Parameter DataWidth bound to: 26 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud_rom' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud.v:6]
+	Parameter DWIDTH bound to: 26 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud_rom.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud_rom' (13#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud' (14#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0cud.v:52]
+INFO: [Synth 8-6157] synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe.v:39]
+	Parameter DataWidth bound to: 42 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe_rom' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe.v:6]
+	Parameter DWIDTH bound to: 42 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe_rom.dat' is read successfully [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe_rom' (15#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe' (16#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0dEe.v:39]
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_54s_67ns_120_5_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_54s_67ns_120_5_1.v:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 67 - type: integer 
+	Parameter dout_WIDTH bound to: 120 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_54s_67ns_120_5_1_Multiplier_0' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_54s_67ns_120_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_54s_67ns_120_5_1_Multiplier_0' (17#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_54s_67ns_120_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_54s_67ns_120_5_1' (18#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_54s_67ns_120_5_1.v:35]
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_13s_71s_71_5_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_13s_71s_71_5_1.v:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 13 - type: integer 
+	Parameter din1_WIDTH bound to: 71 - type: integer 
+	Parameter dout_WIDTH bound to: 71 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_13s_71s_71_5_1_Multiplier_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_13s_71s_71_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_13s_71s_71_5_1_Multiplier_1' (19#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_13s_71s_71_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_13s_71s_71_5_1' (20#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_13s_71s_71_5_1.v:35]
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_43ns_36ns_79_3_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_43ns_36ns_79_3_1.v:31]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 3 - type: integer 
+	Parameter din0_WIDTH bound to: 43 - type: integer 
+	Parameter din1_WIDTH bound to: 36 - type: integer 
+	Parameter dout_WIDTH bound to: 79 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_43ns_36ns_79_3_1_Multiplier_2' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_43ns_36ns_79_3_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_43ns_36ns_79_3_1_Multiplier_2' (21#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_43ns_36ns_79_3_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_43ns_36ns_79_3_1' (22#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_43ns_36ns_79_3_1.v:31]
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_49ns_44ns_93_5_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_49ns_44ns_93_5_1.v:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 49 - type: integer 
+	Parameter din1_WIDTH bound to: 44 - type: integer 
+	Parameter dout_WIDTH bound to: 93 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_49ns_44ns_93_5_1_Multiplier_3' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_49ns_44ns_93_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_49ns_44ns_93_5_1_Multiplier_3' (23#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_49ns_44ns_93_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_49ns_44ns_93_5_1' (24#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_49ns_44ns_93_5_1.v:35]
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_50ns_50ns_100_5_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_50ns_50ns_100_5_1.v:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 50 - type: integer 
+	Parameter din1_WIDTH bound to: 50 - type: integer 
+	Parameter dout_WIDTH bound to: 100 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_mul_50ns_50ns_100_5_1_Multiplier_4' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_50ns_50ns_100_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_50ns_50ns_100_5_1_Multiplier_4' (25#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_50ns_50ns_100_5_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mul_50ns_50ns_100_5_1' (26#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mul_50ns_50ns_100_5_1.v:35]
+INFO: [Synth 8-6157] synthesizing module 'dnn_mac_muladd_16s_16ns_19s_31_4_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mac_muladd_16s_16ns_19s_31_4_1.v:46]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dnn_mac_muladd_16s_16ns_19s_31_4_1_DSP48_0' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mac_muladd_16s_16ns_19s_31_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mac_muladd_16s_16ns_19s_31_4_1_DSP48_0' (27#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mac_muladd_16s_16ns_19s_31_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_mac_muladd_16s_16ns_19s_31_4_1' (28#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_mac_muladd_16s_16ns_19s_31_4_1.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'dnn_pow_generic_double_s' (29#1) [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_pow_generic_double_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'dnn_fadd_32ns_32ns_32_5_full_dsp_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_fadd_32ns_32ns_32_5_full_dsp_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+ERROR: [Synth 8-439] module 'dnn_ap_fadd_3_full_dsp_32' not found [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_fadd_32ns_32ns_32_5_full_dsp_1.v:38]
+ERROR: [Synth 8-6156] failed synthesizing module 'dnn_fadd_32ns_32ns_32_5_full_dsp_1' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn_fadd_32ns_32ns_32_5_full_dsp_1.v:8]
+ERROR: [Synth 8-6156] failed synthesizing module 'dnn' [C:/Users/menuw/Documents/SiA/DNN/HLS/DNN/sigmoidH100/syn/verilog/dnn.v:12]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1123.176 ; gain = 0.000
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 22 01:01:01 2021...
